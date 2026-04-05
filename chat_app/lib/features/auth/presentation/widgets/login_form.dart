@@ -5,7 +5,9 @@ import '../../../../shared/widgets/app_text_field.dart';
 import 'section_label.dart';
 
 class LoginForm extends StatelessWidget {
-  const LoginForm({super.key});
+  const LoginForm({super.key, required this.onLoginPressed});
+
+  final VoidCallback onLoginPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -47,7 +49,7 @@ class LoginForm extends StatelessWidget {
           obscureText: true,
         ),
         const SizedBox(height: 24),
-        const AppPrimaryButton(label: 'Login'),
+        AppPrimaryButton(label: 'Login', onPressed: onLoginPressed),
       ],
     );
   }

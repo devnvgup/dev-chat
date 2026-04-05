@@ -5,7 +5,9 @@ import 'login_form.dart';
 import 'social_login_button.dart';
 
 class LoginCard extends StatelessWidget {
-  const LoginCard({super.key});
+  const LoginCard({super.key, required this.onLoginPressed});
+
+  final VoidCallback onLoginPressed;
 
   @override
   Widget build(BuildContext context) {
@@ -43,7 +45,7 @@ class LoginCard extends StatelessWidget {
               style: textTheme.bodyMedium,
             ),
             const SizedBox(height: 32),
-            const LoginForm(),
+            LoginForm(onLoginPressed: onLoginPressed),
             const SizedBox(height: 28),
             Row(
               children: [
