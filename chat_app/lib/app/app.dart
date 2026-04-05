@@ -1,0 +1,18 @@
+import 'package:flutter/material.dart';
+
+import '../core/theme/app_theme.dart';
+import '../features/auth/presentation/pages/login_page.dart';
+
+class ChatApp extends StatelessWidget {
+  const ChatApp({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return MaterialApp(
+      title: 'Devchat',
+      debugShowCheckedModeBanner: false,
+      theme: AppTheme.lightTheme,
+      home: const LoginPage(),
+    );
+  }
+}
